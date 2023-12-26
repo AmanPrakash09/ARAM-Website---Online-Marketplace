@@ -1,0 +1,42 @@
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.account,
+.shopify {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 242px;
+  left: 48px;
+  font-size: var(--font-size-xl);
+  font-family: var(--p-body-text);
+  color: var(--color-darkslateblue);
+  text-align: left;
+  display: inline-block;
+  width: 85px;
+  height: 21px;
+}
+.account {
+  top: 414px;
+}
+.drawerMenu {
+  position: relative;
+  background-color: var(--color-goldenrod-100);
+  width: 427px;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  max-width: 90%;
+}
+.drawerMenu.animate {
+  animation: 0.25s ease 0s 1 normal forwards slide-in-left;
+}

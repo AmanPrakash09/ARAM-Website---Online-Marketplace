@@ -1,0 +1,7 @@
+.mainPage {
+  position: relative;
+  background-color: var(--color-darkslateblue);
+  width: 100%;
+  height: 4289px;
+  overflow: hidden;
+}
