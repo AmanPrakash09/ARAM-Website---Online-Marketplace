@@ -113,6 +113,27 @@
 .navigationBar.animate {
   animation: 1s ease 0s 1 normal forwards slide-in-top;
 }
+.link {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-family: var(--p-body-text);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  width: 85px;
+  height: 21px;
+  flex-shrink: 0;
+  text-decoration: none;
+  text-underline-offset: none;
+}
+.link:hover {
+  text-decoration: none;
+  color: var(--color-white);
+}
 @media screen and (max-width: 1200px) {
   .menu1 {
     display: none;

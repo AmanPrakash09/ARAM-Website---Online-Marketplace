@@ -6,6 +6,8 @@ import {
   useLocation,
 } from "react-router-dom";
 import MainPage from "./pages/MainPage";
+import LoginForm from "./pages/LoginForm";
+import AccountPage from "./pages/AccountPage";
 
 function App() {
   const action = useNavigationType();
@@ -43,9 +45,12 @@ function App() {
     }
   }, [pathname]);
 
+  const user = false;
   return (
     <Routes>
       <Route path="/" element={<MainPage />} />
+      <Route path="/login" element={ user ? <Navigate to="/" />: <LoginForm />} />
+      <Route path="/account" element={<AccountPage />} />
     </Routes>
   );
 }

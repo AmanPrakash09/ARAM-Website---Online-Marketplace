@@ -5,6 +5,7 @@ import StateDefault from "./StateDefault";
 import DrawerMenu from "./DrawerMenu";
 import PortalDrawer from "./PortalDrawer";
 import styles from "./NavigationBar.module.css";
+import { Link } from "react-router-dom";
 
 const NavigationBar = () => {
   const [isDrawerMenuOpen, setDrawerMenuOpen] = useState(false);
@@ -69,7 +70,12 @@ const NavigationBar = () => {
   const closeDrawerMenu = useCallback(() => {
     setDrawerMenuOpen(false);
   }, []);
-
+  
+  const user = false;
+  const string = user ? "/" : "/login";
+  const accountHandleClick = () => {
+    window.location.href = string;
+  };
   return (
     <>
       <nav className={styles.navigationBar} data-animate-on-scroll>
@@ -129,7 +135,7 @@ const NavigationBar = () => {
                 contactUsColor="#fff"
                 onContactButtonClick={onContactButtonClick}
               />
-              <button className={styles.shopify}>account</button>
+              <span className={styles.link} onClick={accountHandleClick}>account</span>
             </section>
             <button className={styles.menu1} onClick={openDrawerMenu} />
           </div>
