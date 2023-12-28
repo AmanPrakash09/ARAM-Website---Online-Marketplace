@@ -3,6 +3,7 @@ const express = require("express");
 const cors = require("cors")
 const passportSetup = require("./passport");
 const passport = require("passport");
+const authRoute = require("./routes/auth")
 const app = express()
 
 app.use(
@@ -17,6 +18,8 @@ app.use(cors({
     methdos: "GET,POST,PUT,DELETE",
     credentials: true,
 }));
+
+app.use("/auth", authRoute);
 
 app.listen(5000, ()=> {
     console.log("server is running!")

@@ -71,8 +71,32 @@ const NavigationBar = () => {
     setDrawerMenuOpen(false);
   }, []);
   
-  const user = false;
-  const string = user ? "/" : "/login";
+  const [user,setUser] = useState(null);
+
+  useEffect(() => {
+    const getUser = async () => {
+      fetch("http://localhost:5000/auth/login/success", {
+        method: "GET",
+        credentials: "include",
+        headers: {
+          Accept: "application/json",
+          "Acess-Control-Allow-Credentials": true,
+        },
+      }).then(response => {
+        if (response.status === 200) return response.json();
+        throw new Error("Authentication Failed!")
+      }).then(resObject => {
+        setUser(resObject.user)
+      }).catch(err => {
+        console.log(err);
+      });
+    };
+    getUser();
+  }, []);
+
+  console.log(user);
+
+  const string = user ? "/account" : "/login";
   const accountHandleClick = () => {
     window.location.href = string;
   };

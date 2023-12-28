@@ -1,13 +1,16 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
+  BrowserRouter,
   Routes,
   Route,
+  Navigate,
   useNavigationType,
   useLocation,
 } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import LoginForm from "./pages/LoginForm";
 import AccountPage from "./pages/AccountPage";
+import NavigationBar from "./components/NavigationBar";
 
 function App() {
   const action = useNavigationType();
@@ -45,13 +48,42 @@ function App() {
     }
   }, [pathname]);
 
-  const user = false;
+  // const user = false;
+
+  const [user,setUser] = useState(null);
+
+  useEffect(() => {
+    const getUser = async () => {
+      fetch("http://localhost:5000/auth/login/success", {
+        method: "GET",
+        credentials: "include",
+        headers: {
+          Accept: "application/json",
+          "Acess-Control-Allow-Credentials": true,
+        },
+      }).then(response => {
+        if (response.status === 200) return response.json();
+        throw new Error("Authentication Failed!")
+      }).then(resObject => {
+        setUser(resObject.user)
+      }).catch(err => {
+        console.log(err);
+      });
+    };
+    getUser();
+  }, []);
+
+  console.log(user);
+
   return (
-    <Routes>
-      <Route path="/" element={<MainPage />} />
-      <Route path="/login" element={ user ? <Navigate to="/" />: <LoginForm />} />
-      <Route path="/account" element={<AccountPage />} />
-    </Routes>
+  <div>
+      {/* <NavigationBar user={user}/> */}
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/login" element={ user ? <AccountPage />: <LoginForm />} />
+        <Route path="/account" element={<AccountPage />} />
+      </Routes>
+    </div>
   );
 }
 export default App;
