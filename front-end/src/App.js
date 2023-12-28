@@ -79,9 +79,9 @@ function App() {
   <div>
       {/* <NavigationBar user={user}/> */}
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/login" element={ user ? <AccountPage />: <LoginForm />} />
-        <Route path="/account" element={<AccountPage />} />
+        <Route path="/" element={<MainPage user={user} />} />
+        <Route path="/login" element={ user ? <AccountPage user={user} />: <LoginForm />} />
+        <Route path="/account" element={ user ? <AccountPage user={user} />: <LoginForm />} />
       </Routes>
     </div>
   );

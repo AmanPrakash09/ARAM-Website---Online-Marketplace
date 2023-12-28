@@ -6,7 +6,7 @@ import AboutContainer from "../components/AboutContainer";
 import Footer from "../components/Footer";
 import styles from "./MainPage.module.css";
 
-const MainPage = () => {
+const MainPage = ({ user }) => {
   const onProductsButtonClick = useCallback(() => {
     const anchor = document.querySelector(
       "[data-scroll-to='productsContainer']"
@@ -32,9 +32,9 @@ const MainPage = () => {
 
   return (
     <div className={styles.mainPage}>
-      <NavigationBar />
+      <NavigationBar user={user} />
       <Hero />
-      <ProductsCard />
+      <ProductsCard user={user} />
       <AboutContainer />
       <Footer />
     </div>
