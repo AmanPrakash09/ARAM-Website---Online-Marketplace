@@ -8,15 +8,16 @@
     opacity: 1;
   }
 }
+
 .account,
-.shopify {
+.shopify,
+.contactUs,
+.about {
   cursor: pointer;
   border: 0;
   padding: 0;
   background-color: transparent;
   position: absolute;
-  top: 242px;
-  left: 48px;
   font-size: var(--font-size-xl);
   font-family: var(--p-body-text);
   color: var(--color-darkslateblue);
@@ -25,9 +26,28 @@
   width: 85px;
   height: 21px;
 }
+
+.shopify {
+  top: 48px;
+}
+
+.about {
+  top: 145px;
+}
+
+.shopify,
+.account {
+  top: 242px;
+}
+
 .account {
   top: 414px;
 }
+
+.contactUs {
+  top: 317px;
+}
+
 .drawerMenu {
   position: relative;
   background-color: var(--color-goldenrod-100);
@@ -37,6 +57,7 @@
   opacity: 0;
   max-width: 90%;
 }
+
 .drawerMenu.animate {
   animation: 0.25s ease 0s 1 normal forwards slide-in-left;
 }

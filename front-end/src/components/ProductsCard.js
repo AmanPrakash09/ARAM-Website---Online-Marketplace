@@ -54,11 +54,7 @@ const ProductsCard = ({ user }) => {
     };
   }, []);
   return (
-    <div
-      className={styles.products}
-      data-scroll-to="productsContainer"
-      data-animate-on-scroll
-    >
+    <div className={styles.products} data-scroll-to="productsContainer" data-animate-on-scroll>
       <div className={styles.outerColumnFrame1}>
         <div className={styles.innerColumnFrame1}>
           <div className={styles.rug1} onClick={() => saveRug("rug1")}>

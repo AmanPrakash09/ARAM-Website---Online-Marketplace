@@ -109,8 +109,9 @@
 }
 .footer {
   position: absolute;
-  top: 4103px;
-  left: 0;
+  top: 95%;
+  left: 12.5%;
+  transform: translate(-50%, -50%);
   width: 1440px;
   align-items: center;
   padding: 0 var(--padding-93xl);

@@ -8,9 +8,7 @@ import styles from "./MainPage.module.css";
 
 const MainPage = ({ user }) => {
   const onProductsButtonClick = useCallback(() => {
-    const anchor = document.querySelector(
-      "[data-scroll-to='productsContainer']"
-    );
+    const anchor = document.querySelector("[data-scroll-to='productsContainer']");
     if (anchor) {
       anchor.scrollIntoView({ block: "start", behavior: "smooth" });
     }

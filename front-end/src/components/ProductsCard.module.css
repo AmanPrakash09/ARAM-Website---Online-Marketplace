@@ -140,14 +140,12 @@
 }
 .products {
   position: absolute;
-  top: 1071px;
-  left: 0;
-  width: 1440px;
+  width: 100%;
+  top: 22%;
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: var(--padding-sm) 35.19999694824219px;
   box-sizing: border-box;
   opacity: 0;
