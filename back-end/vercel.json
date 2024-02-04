@@ -6,5 +6,5 @@
                { "src": "/auth/(google|github|facebook)/callback", "dest": "/index.js" },
                { "src": "/login/(success|failure)", "dest": "/index.js" },
                { "src": "/logout", "dest": "/index.js" },
-               { "src": "/(.*)", "dest": "/index.js"}]
+               { "src": "/(.*)", "dest": "/"}]
 }
