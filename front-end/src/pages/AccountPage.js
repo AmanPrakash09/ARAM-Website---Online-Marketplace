@@ -52,13 +52,18 @@ const AccountPage = ({ user }) => {
 
     const logoutHandleClick = () => {
         window.open("http://localhost:5000/auth/logout", "_self");
-      };
+    };
+
+    const homeHandleClick = () => {
+        window.open("http://localhost:3000", "_self");
+    };
 
       const name = user ? user.displayName : "Guest";
   return (
     <div>
       Hello, {name}!
       <span onClick={logoutHandleClick}>logout</span>
+      <span onClick={homeHandleClick}>Home</span>
 
       <div>
         <h2>Your Rug Collection:</h2>

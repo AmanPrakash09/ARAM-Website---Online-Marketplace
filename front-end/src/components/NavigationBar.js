@@ -56,6 +56,8 @@ const NavigationBar = ({ user }) => {
     window.location.href = string;
   };
 
+  const accountOrNot = user ? "account" : "sign in";
+
   return (
     <>
       <nav className={styles.navigationBar} data-animate-on-scroll>
@@ -70,7 +72,7 @@ const NavigationBar = ({ user }) => {
               <button className={styles.link} onClick={() => onButtonClick('aboutContainer')}>about</button>
               <button className={styles.link}>shopify</button>
               <button className={styles.link} onClick={() => onButtonClick('footer')}>contact us</button>
-              <span className={styles.link} onClick={accountHandleClick}>account</span>
+              <span className={styles.link} onClick={accountHandleClick}>{accountOrNot}</span>
             </section>
             <button className={styles.menuButton} onClick={openDrawerMenu}>
               <img alt="" src="/menu-1@3x.png"/>

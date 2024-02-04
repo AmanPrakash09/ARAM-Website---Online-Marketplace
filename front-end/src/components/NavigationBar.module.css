@@ -58,6 +58,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: var(--gap-lg);
 }
 
 .menuButton {
@@ -123,6 +124,7 @@
   text-decoration: none;
   padding: 0 15px;
   box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .link:hover {

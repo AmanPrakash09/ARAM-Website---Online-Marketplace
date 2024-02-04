@@ -43,6 +43,8 @@ const DrawerMenu = ({ user, onClose }) => {
     window.location.href = string;
   };
 
+  const accountOrNot = user ? "account" : "sign in";
+
   return (
     <div className={`${styles.drawerMenu} ${styles.animate}`} data-animate-on-scroll>
       <button className={styles.products} onClick={() => handleClick("productsContainer")}>
@@ -55,7 +57,7 @@ const DrawerMenu = ({ user, onClose }) => {
       <button className={styles.contactUs} onClick={() => handleClick("footer")}>
         contact us
       </button>
-      <button className={styles.account} onClick={accountHandleClick}>account</button>
+      <button className={styles.account} onClick={accountHandleClick}>{accountOrNot}</button>
     </div>
   );
 };

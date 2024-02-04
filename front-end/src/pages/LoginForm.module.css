@@ -1,3 +1,17 @@
+body {
+  margin: 0; /* Remove default margin */
+  background-color: var(--color-darkslateblue); /* Set background color for the entire body */
+}
+
+.container {
+  background-color: white; /* Set the background color for the container */
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .facebookIcon {
     position: relative;
     width: 262px;
@@ -25,7 +39,7 @@
   .facebookButton:hover,
   .githubButton:hover,
   .googleButton:hover {
-    background-color: var(--color-whitesmoke);
+    background-color: var(--color-blanchedalmond);
   }
   .githubButton {
     top: 367px;
@@ -60,7 +74,7 @@
     overflow: hidden;
   }
   .loginForm {
-    background-color: var(--color-blanchedalmond);
+    background-color: var(--color-goldenrod-100);
     width: 617px;
     height: 488px;
     overflow: hidden;
@@ -68,5 +82,14 @@
     font-size: 40px;
     color: #000;
     font-family: var(--p-body-text);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
