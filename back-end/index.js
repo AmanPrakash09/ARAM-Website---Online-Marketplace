@@ -23,11 +23,27 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+// app.use(cors({
+//     origin:"https://aram-website-online-marketplace-client.vercel.app",
+//     methdos: "GET,POST,PUT,DELETE",
+//     credentials: true,
+// }));
 app.use(cors({
-    origin:"https://aram-website-online-marketplace-client.vercel.app",
-    methdos: "GET,POST,PUT,DELETE",
+    origin: [
+        "https://www.a-ramcreatives.com",
+        "https://aram-website-online-marketpl-git-30e5ad-amans-projects-ba11e8b4.vercel.app",
+        "https://aram-website-online-marketplace-client-amans-projects-ba11e8b4.vercel.app",
+        "https://aram-website-online-marketplace-client.vercel.app"
+    ],
+    methods: "GET,POST,PUT,DELETE",
     credentials: true,
 }));
+
+// Add the logging middleware here
+app.use((req, res, next) => {
+    console.log(`Received ${req.method} request for ${req.url}`);
+    next();
+});
 
 app.use("/auth", authRoute);
 
