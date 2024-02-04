@@ -11,7 +11,7 @@ const AccountPage = ({ user }) => {
         }
 
         try {
-            const response = await axios.get(`http://localhost:5000/myCollection?user_id=${user.displayName + user.id}`);
+            const response = await axios.get(`https://marketplace.a-ramcreatives.com/myCollection?user_id=${user.displayName + user.id}`);
             setRugNames(response.data);
         } catch (err) {
             console.log(err);
@@ -28,7 +28,7 @@ const AccountPage = ({ user }) => {
         }
 
         try {
-            await axios.delete(`http://localhost:5000/deleteItem?user_id=${user.displayName + user.id}&rug_name=${rug_name}`);
+            await axios.delete(`https://marketplace.a-ramcreatives.com/deleteItem?user_id=${user.displayName + user.id}&rug_name=${rug_name}`);
             fetchUserCollection();
         } catch (err) {
             console.log(err);
@@ -41,7 +41,7 @@ const AccountPage = ({ user }) => {
             provider: user.provider,
         }
         try {
-            await axios.post("http://localhost:5000/users", object);
+            await axios.post("https://marketplace.a-ramcreatives.com/users", object);
             fetchUserCollection();
         } catch (err) {
             console.log(err)
@@ -51,7 +51,7 @@ const AccountPage = ({ user }) => {
     addUser();
 
     const logoutHandleClick = () => {
-        window.open("http://localhost:5000/auth/logout", "_self");
+        window.open("https://marketplace.a-ramcreatives.com/auth/logout", "_self");
     };
 
     const homeHandleClick = () => {
