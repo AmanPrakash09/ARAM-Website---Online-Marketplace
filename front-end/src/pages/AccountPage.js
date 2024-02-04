@@ -55,7 +55,7 @@ const AccountPage = ({ user }) => {
     };
 
     const homeHandleClick = () => {
-        window.open("https://aram-website-online-marketplace-client.vercel.app/", "_self");
+        window.open("https://aram-website-online-marketplace-client.vercel.app", "_self");
     };
 
       const name = user ? user.displayName : "Guest";

@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const passport = require("passport")
 
-const CLIENT_URL = "http://localhost:3000/"
+const CLIENT_URL = "https://aram-website-online-marketplace-client.vercel.app/"
 const ACCOUNT_URL = CLIENT_URL + "account"
 
 router.get("/login/success", (req, res) => {

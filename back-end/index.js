@@ -24,7 +24,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(cors({
-    origin:"https://aram-website-online-marketplace-client.vercel.app/",
+    origin:"https://aram-website-online-marketplace-client.vercel.app",
     methdos: "GET,POST,PUT,DELETE",
     credentials: true,
 }));
