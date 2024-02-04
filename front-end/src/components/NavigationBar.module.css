@@ -52,32 +52,25 @@
   gap: var(--gap-lg);
 }
 
-.shopify {
-  font-size: var(--font-size-xl);
-  font-family: var(--p-body-text);
-  color: var(--color-white);
-  width: 85px;
-  height: 21px;
-}
-
 .horizontalList {
-  width: 595px;
-  flex-shrink: 0;
+  flex-grow: 1;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
 
-.menu1 {
+.menuButton {
   cursor: pointer;
   width: 40px;
   height: 40px;
-  background-image: url(/public/menu-1@3x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
+  background: none;
+  border: none;
   display: none;
+  margin: 15px;
+  position: absolute;
+  top: 10%;
+  right: 0;
 }
 
 .menu {
@@ -105,14 +98,14 @@
   margin: 0 auto;
   position: absolute;
   top: 0;
-  left: 15%;
-  transform: translateX(-50%);
+  left: 0;
   width: 100%;
-  max-width: 1440px;
+  left: 13%;
+  max-width: 75%;
   height: 134px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-13xl) var(--padding-77xl);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-13xl) var(--padding-3xl);
   box-sizing: border-box;
   z-index: 10;
 }
@@ -127,6 +120,9 @@
   color: var(--color-white);
   width: 85px;
   height: 21px;
+  text-decoration: none;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .link:hover {
@@ -135,14 +131,8 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .menu1 {
+  .menuButton {
     display: none;
-  }
-  .navbar {
-    flex-direction: row;
-    gap: var(--gap-221xl);
-    align-items: flex-start;
-    justify-content: flex-start;
   }
 }
 
@@ -150,17 +140,16 @@
   .horizontalList {
     display: none;
   }
-  .menu1 {
+  .menuButton {
     display: flex;
   }
   .navigationBar {
-    left: 0;
-    transform: none;
+    padding: var(--padding-13xl) var(--padding-base);
   }
 }
 
 @media screen and (max-width: 420px) {
-  .menu1 {
+  .menuButton {
     display: flex;
   }
   .navbar {

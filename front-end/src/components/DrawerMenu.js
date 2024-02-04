@@ -1,7 +1,7 @@
 import { useCallback, useEffect } from "react";
 import styles from "./DrawerMenu.module.css";
 
-const DrawerMenu = ({ onClose }) => {
+const DrawerMenu = ({ user, onClose }) => {
   const handleClick = useCallback((sectionId) => {
     const anchor = document.querySelector(`[data-scroll-to='${sectionId}']`);
     if (anchor) {
@@ -38,9 +38,14 @@ const DrawerMenu = ({ onClose }) => {
     };
   }, []);
 
+  const accountHandleClick = () => {
+    const string = user ? "/account" : "/login";
+    window.location.href = string;
+  };
+
   return (
     <div className={`${styles.drawerMenu} ${styles.animate}`} data-animate-on-scroll>
-      <button className={styles.shopify} onClick={() => handleClick("productsContainer")}>
+      <button className={styles.products} onClick={() => handleClick("productsContainer")}>
         products
       </button>
       <button className={styles.about} onClick={() => handleClick("aboutContainer")}>
@@ -48,9 +53,9 @@ const DrawerMenu = ({ onClose }) => {
       </button>
       <button className={styles.shopify}>shopify</button>
       <button className={styles.contactUs} onClick={() => handleClick("footer")}>
-        contact Us
+        contact us
       </button>
-      <button className={styles.account}>account</button>
+      <button className={styles.account} onClick={accountHandleClick}>account</button>
     </div>
   );
 };

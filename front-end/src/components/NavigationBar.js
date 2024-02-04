@@ -68,11 +68,13 @@ const NavigationBar = ({ user }) => {
             <section className={styles.horizontalList}>
               <button className={styles.link} onClick={() => onButtonClick('productsContainer')}>products</button>
               <button className={styles.link} onClick={() => onButtonClick('aboutContainer')}>about</button>
-              <button className={styles.shopify}>shopify</button>
+              <button className={styles.link}>shopify</button>
               <button className={styles.link} onClick={() => onButtonClick('footer')}>contact us</button>
               <span className={styles.link} onClick={accountHandleClick}>account</span>
             </section>
-            <button className={styles.menu1} onClick={openDrawerMenu} />
+            <button className={styles.menuButton} onClick={openDrawerMenu}>
+              <img alt="" src="/menu-1@3x.png"/>
+            </button>
           </div>
         </div>
       </nav>
@@ -82,7 +84,7 @@ const NavigationBar = ({ user }) => {
           placement="Left"
           onOutsideClick={closeDrawerMenu}
         >
-          <DrawerMenu onClose={closeDrawerMenu} />
+          <DrawerMenu user={user}onClose={closeDrawerMenu} />
         </PortalDrawer>
       )}
     </>
