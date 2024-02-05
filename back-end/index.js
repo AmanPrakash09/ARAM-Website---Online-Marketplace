@@ -24,7 +24,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(cors({
-    origin:"https://www.a-ramcreatives.com",
+    origin: ["http://localhost:3000", "https://www.a-ramcreatives.com"],
     methdos: "GET,POST,PUT,DELETE",
     credentials: true,
 }));
@@ -32,13 +32,19 @@ app.use(cors({
 app.use("/auth", authRoute);
 
 app.get("/", (req,res) => {
+    console.log("Received request at /");
     res.json("this is the back-end speaking")
 })
 
 app.get("/rugs", (req, res) => {
+    console.log("Received request at /rugs");
     const q = "SELECT * FROM rugs"
     db.query(q,(err,data) => {
-        if (err) return res.json(err)
+        if (err) {
+            console.error("Error fetching rugs:", err);
+            return res.json(err);
+        }
+        console.log("Rugs fetched successfully");
         return res.json(data)
     })
 })
@@ -51,7 +57,11 @@ app.post("/users", (req, res) => {
     ]
 
     db.query(q,[values], (err, data) => {
-        if (err) return res.json(err)
+        if (err) {
+            console.log("Error adding user!");
+            return res.json(err)
+        }
+        console.log("User added successfully");
         console.log("user added")
         return res.json("User successfully added to the database!")
     })
@@ -65,7 +75,10 @@ app.post("/saveItem", (req, res) => {
     ]
 
     db.query(q,[values], (err, data) => {
-        if (err) return res.json(err)
+        if (err) {
+            console.log("item dailed to add to the user");
+            return res.json(err);
+        }
         console.log("item added to the user")
         return res.json("Item was successfully added to the user!")
     })
@@ -74,7 +87,11 @@ app.post("/saveItem", (req, res) => {
 app.get("/allCollections", (req, res) => {
     const q = "SELECT * FROM user_collections"
     db.query(q,(err,data) => {
-        if (err) return res.json(err)
+        if (err) {
+            console.log("Error getting all user collections!");
+            return res.json(err);
+        }
+        console.log("Got all user collections!");
         return res.json(data)
     })
 })
@@ -84,14 +101,19 @@ app.get("/myCollection", (req, res) => {
     const user_id = req.query.user_id;
 
     if (!user_id) {
+        console.log("No user!");
         return res.status(400).json({ error: "user_id is required" });
     }
 
     const q = "SELECT rug_name FROM user_collections WHERE user_id = ?";
     
     db.query(q, [user_id], (err, data) => {
-        if (err) return res.json(err);
+        if (err) {
+            console.log("Error getting rugs from user's collections!");
+            return res.json(err);
+        }
 
+        console.log("Got all rugs from user's collections!");
         return res.json(data);
     });
 });
@@ -107,7 +129,10 @@ app.delete("/deleteItem", (req, res) => {
     const q = "DELETE FROM user_collections WHERE user_id = ? AND rug_name = ?";
 
     db.query(q, [user_id, rug_name], (err, data) => {
-        if (err) return res.json(err);
+        if (err) {
+            console.log("Error deleting rug from user collections!");
+            return res.json(err);
+        }
 
         return res.json({ message: "Item successfully deleted from the user's collection" });
     });
