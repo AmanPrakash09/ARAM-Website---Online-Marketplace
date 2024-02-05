@@ -23,8 +23,14 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+// app.use(cors({
+//     origin: ["http://localhost:3000", "https://www.a-ramcreatives.com"],
+//     methods: "GET,POST,PUT,DELETE",
+//     credentials: true,
+// }));
+
 app.use(cors({
-    origin: ["http://localhost:3000", "https://www.a-ramcreatives.com"],
+    origin: "https://www.a-ramcreatives.com",
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
 }));
