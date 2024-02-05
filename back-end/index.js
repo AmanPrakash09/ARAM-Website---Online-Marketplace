@@ -25,7 +25,7 @@ app.use(passport.session());
 
 app.use(cors({
     origin: ["http://localhost:3000", "https://www.a-ramcreatives.com"],
-    methdos: "GET,POST,PUT,DELETE",
+    methods: "GET,POST,PUT,DELETE",
     credentials: true,
 }));
 

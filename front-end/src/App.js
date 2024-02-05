@@ -59,7 +59,7 @@ function App() {
         credentials: "include",
         headers: {
           Accept: "application/json",
-          "Acess-Control-Allow-Credentials": true,
+          "Access-Control-Allow-Credentials": true,
         },
       }).then(response => {
         if (response.status === 200) return response.json();

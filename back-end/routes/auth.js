@@ -5,6 +5,7 @@ const CLIENT_URL = "http://localhost:3000/"
 const ACCOUNT_URL = CLIENT_URL + "account"
 
 router.get("/login/success", (req, res) => {
+    console.log("Received successful login request");
     if (req.user) {
         res.status(200).json({
             success: true,
@@ -16,6 +17,7 @@ router.get("/login/success", (req, res) => {
 });
 
 router.get("/login/failure", (req, res) => {
+    console.log("Received login failure request");
     res.status(401).json({
         success: false,
         message: "login failed",
@@ -23,6 +25,7 @@ router.get("/login/failure", (req, res) => {
 });
 
 router.get("/logout", (req, res) => {
+    console.log("Received logout request");
     req.logOut();
     res.redirect(CLIENT_URL);
 });
@@ -32,7 +35,10 @@ router.get("/google", passport.authenticate("google", { scope: ["profile"] }));
 router.get("/google/callback", passport.authenticate("google", {
     successRedirect: ACCOUNT_URL,
     failureRedirect: "/login/failure"
-}))
+}), (req, res) => {
+    console.log("Google callback completed");
+    res.redirect(ACCOUNT_URL);
+});
 
 router.get("/github", passport.authenticate("github", { scope: ['user:email'] }));
 
