@@ -54,7 +54,7 @@ function App() {
 
   useEffect(() => {
     const getUser = async () => {
-      fetch("http://18.216.190.205:5000/auth/login/success", {
+      fetch("http://marketplace.a-ramcreatives.com/auth/login/success", {
         method: "GET",
         credentials: "include",
         headers: {
