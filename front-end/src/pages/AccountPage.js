@@ -12,7 +12,6 @@ const AccountPage = ({ user }) => {
 
         try {
             const response = await axios.get(`https://marketplace.a-ramcreatives.com/myCollection?user_id=${user.displayName + user.id}`);
-            console.log(response.data);
             setRugNames(response.data);
         } catch (err) {
             console.log(err);
