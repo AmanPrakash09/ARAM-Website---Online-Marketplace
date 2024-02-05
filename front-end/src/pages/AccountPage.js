@@ -72,7 +72,7 @@ const AccountPage = ({ user }) => {
       <div>
         <h2>Your Rug Collection:</h2>
         <ul>
-            {rugNames.map((rug, index) => (
+            {Array.isArray(rugNames) && rugNames.map((rug, index) => (
                 <li key={index}>
                     {rug.rug_name}
                     <button onClick={() => handleDelete(rug.rug_name)}>Delete</button>
