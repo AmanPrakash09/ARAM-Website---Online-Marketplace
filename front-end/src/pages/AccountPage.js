@@ -58,6 +58,10 @@ const AccountPage = ({ user }) => {
         window.open("https://www.a-ramcreatives.com", "_self");
     };
 
+    // const homeHandleClick = () => {
+    //     window.open("http://localhost:3000", "_self");
+    // };
+
       const name = user ? user.displayName : "Guest";
   return (
     <div>
