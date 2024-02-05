@@ -52,26 +52,46 @@ function App() {
 
   const [user,setUser] = useState(null);
 
+  console.log("A");
+
   useEffect(() => {
     const getUser = async () => {
-      fetch("http://localhost:5000/auth/login/success", {
-        method: "GET",
-        credentials: "include",
-        headers: {
-          Accept: "application/json",
-          "Access-Control-Allow-Credentials": true,
-        },
-      }).then(response => {
-        if (response.status === 200) return response.json();
-        throw new Error("Authentication Failed!")
-      }).then(resObject => {
-        setUser(resObject.user)
-      }).catch(err => {
-        console.log(err);
-      });
-    };
+      console.log("B");
+      try {
+          console.log("C");
+          const response = await fetch("https://marketplace.a-ramcreatives.com/auth/login/success", {
+              method: "GET",
+              credentials: "include",
+              headers: {
+                  Accept: "application/json",
+                  "Access-Control-Allow-Credentials": true,
+              },
+          });
+  
+          console.log("D");
+  
+          // if (response.status === 200) {
+          //     const resObject = await response.json();
+          //     setUser(resObject.user);
+          // } else {
+          //     console.log("Failed to authenticate. Status:", response.status);
+          //     throw new Error("Authentication Failed!");
+          // }
+
+          const responseData = await response.json();
+          console.log("Complete Response:", responseData);
+          setUser(responseData.user);
+  
+          console.log("E");
+      } catch (err) {
+          console.error("Error during authentication:", err);
+      }
+  };
+  
+
     getUser();
-  }, []);
+}, []);
+
 
   console.log(user);
 
