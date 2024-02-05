@@ -17,7 +17,7 @@ const ProductsCard = ({ user }) => {
         rug_name: rugName,
       }
       try {
-          await axios.post("http://marketplace.a-ramcreatives.com/saveItem", object)
+          await axios.post("http://localhost:5000/saveItem", object)
       } catch (err) {
           console.log(err)
       }
