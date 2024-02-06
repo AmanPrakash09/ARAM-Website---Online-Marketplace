@@ -126,3 +126,11 @@
 .footer.animate {
   animation: 1s ease 0s 1 normal forwards fade-in-bottom;
 }
+
+.titleFrame,
+.outerFrame,
+.innerFrame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
