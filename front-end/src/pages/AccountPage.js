@@ -54,8 +54,12 @@ const AccountPage = ({ user }) => {
         window.open("https://marketplace.a-ramcreatives.com/auth/logout", "_self");
     };
 
+    // const homeHandleClick = () => {
+    //     window.open("https://www.a-ramcreatives.com", "_self");
+    // };
+
     const homeHandleClick = () => {
-        window.open("https://www.a-ramcreatives.com", "_self");
+        window.open("https://aram-website-online-marketpl-git-30e5ad-amans-projects-ba11e8b4.vercel.app", "_self");
     };
 
     // const homeHandleClick = () => {

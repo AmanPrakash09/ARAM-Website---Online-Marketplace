@@ -29,8 +29,14 @@ app.use(passport.session());
 //     credentials: true,
 // }));
 
+// app.use(cors({
+//     origin: "https://www.a-ramcreatives.com",
+//     methods: "GET,POST,PUT,DELETE",
+//     credentials: true,
+// }));
+
 app.use(cors({
-    origin: "https://www.a-ramcreatives.com",
+    origin: "https://aram-website-online-marketpl-git-30e5ad-amans-projects-ba11e8b4.vercel.app",
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
 }));
