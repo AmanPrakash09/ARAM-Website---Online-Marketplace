@@ -70,7 +70,7 @@ app.post("/users", (req, res) => {
 
     db.query(q,[values], (err, data) => {
         if (err) {
-            console.log("Error adding user!");
+            console.log("Error adding user! They might already exist in DB.");
             return res.json(err)
         }
         console.log("User added successfully");
