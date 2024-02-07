@@ -42,26 +42,28 @@ const Footer = () => {
       </div>
       <div className={styles.outerFrame}>
         <div className={styles.innerFrame}>
-          <a className={styles.telephone} href="tel:+17788466911" />
-          <a className={styles.phoneText} href="tel:+17788466911">
+          <a className={styles.telephone} href="tel:+17788466911" target="_blank"/>
+          <a className={styles.phoneText} href="tel:+17788466911" target="_blank">
             +1 (778) 846-6911
           </a>
-          <a className={styles.email} href="mailto:rohitprakash11@gmail.com" />
+          <a className={styles.email} href="mailto:rohitprakash11@gmail.com" target="_blank"/>
           <a
             className={styles.emailText}
             href="mailto:rohitprakash11@gmail.com"
+            target="_blank"
           >{`rohitprakash11@gmail.com `}</a>
+          <a
+            className={styles.linkedin}
+            href="https://www.linkedin.com/in/rohit-prakash-cpa-cma/"
+            target="_blank"
+          />
           <a
             className={styles.linkedinText}
             href="https://www.linkedin.com/in/rohit-prakash-cpa-cma/"
             target="_blank"
           >
             Rohit Prakash
-          </a>
-          <a
-            className={styles.linkedin}
-            href="https://www.linkedin.com/in/rohit-prakash-cpa-cma/"
-          />
+          </a>          
         </div>
       </div>
     </footer>
