@@ -68,34 +68,36 @@ const ProductsCard = ({ user }) => {
           </div>
         </div>
       </div>
-      <div className={styles.outerColumnFrame2}>
-        <div className={styles.innerColumnFrame2}>
-          <div className={styles.rug2} onClick={() => saveRug("rug2")}>
-            <img className={styles.rug210} alt="" src="/rug-2-10@2x.png" />
+      <div className={styles.outerColumnFrame1}>
+        <div className={styles.innerColumnFrame1}>
+          <div className={styles.rug1} onClick={() => saveRug("rug2")}>
+            <img className={styles.rug110} alt="" src="/rug-2-10@2x.png" />
           </div>
-          <div className={styles.rug2} onClick={() => saveRug("rug7")}>
-            <img className={styles.rug210} alt="" src="/rug-7-1@2x.png" />
+          <div className={styles.rug1} onClick={() => saveRug("rug7")}>
+            <img className={styles.rug110} alt="" src="/rug-7-1@2x.png" />
           </div>
-          <div className={styles.rug2} onClick={() => saveRug("rug12")}>
-            <img className={styles.rug210} alt="" src="/rug-12-1@2x.png" />
-          </div>
-        </div>
-      </div>
-      <div className={styles.outerColumnFrame3}>
-        <b className={styles.productsTitle}>products</b>
-        <div className={styles.innerColumnFrame3}>
-          <div className={styles.rug3} onClick={() => saveRug("rug3")}>
-            <img className={styles.rug210} alt="" src="/rug-3-2@2x.png" />
-          </div>
-          <div className={styles.rug3} onClick={() => saveRug("rug8")}>
-            <img className={styles.rug210} alt="" src="/rug-8-1@2x.png" />
-          </div>
-          <div className={styles.rug3} onClick={() => saveRug("rug13")}>
-            <img className={styles.rug210} alt="" src="/rug-13-1@2x.png" />
+          <div className={styles.rug1} onClick={() => saveRug("rug12")}>
+            <img className={styles.rug110} alt="" src="/rug-12-1@2x.png" />
           </div>
         </div>
       </div>
-      <div className={styles.outerColumnFrame2}>
+      <div className={styles.outerColumnFrame1}>
+        <div className={styles.productsTitleContainer}>
+          <b className={styles.productsTitle}>products</b>
+        </div>
+        <div className={styles.innerColumnFrame1}>
+          <div className={styles.rug1} onClick={() => saveRug("rug3")}>
+            <img className={styles.rug110} alt="" src="/rug-3-2@2x.png" />
+          </div>
+          <div className={styles.rug1} onClick={() => saveRug("rug8")}>
+            <img className={styles.rug110} alt="" src="/rug-8-1@2x.png" />
+          </div>
+          <div className={styles.rug1} onClick={() => saveRug("rug13")}>
+            <img className={styles.rug110} alt="" src="/rug-13-1@2x.png" />
+          </div>
+        </div>
+      </div>
+      <div className={styles.outerColumnFrame1}>
         <div className={styles.innerColumnFrame1}>
           <div className={styles.rug1} onClick={() => saveRug("rug4")}>
             <img className={styles.rug110} alt="" src="/rug-4-1@2x.png" />

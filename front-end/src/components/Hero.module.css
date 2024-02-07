@@ -100,7 +100,7 @@
 
   .heroLogoIcon {
     top: 5%;
-    left: 30%;
+    left: 25%;
     transform: translate(-50%, -50%);
   }
 
@@ -137,7 +137,7 @@
 
 @media screen and (max-width: 710px) {
   .regularHeroText {
-    top: 43%;
+    top: 60%;
     left: 15%;
     transform: translate(-50%, -50%);
     width: 70%;
@@ -149,11 +149,11 @@
     left: 20%;
     transform: translate(-50%, -50%);
     width: 60%;
-    height: 30%;
+    height: 45%;
   }
 
   .boldHeroText {
-    top: 35%;
+    top: 50%;
     left: 20%;
     transform: translate(-50%, -50%);
     width: 70%;
