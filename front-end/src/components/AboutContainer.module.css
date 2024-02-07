@@ -168,15 +168,15 @@
 .pinkUnderlap1.animate {
   animation: 1s ease 0s 1 normal forwards fade-in-bottom;
 }
-.networking2Icon {
+.pinkUnderlap1Icon {
   position: absolute;
-  top: 120px;
+  top: 145px;
   left: 149px;
-  width: 200px;
-  height: 200px;
+  width: 190px;
+  height: 190px;
   object-fit: cover;
 }
-.weAimNot {
+.pinkUnderlap1Text {
   position: absolute;
   top: 27px;
   left: 37px;
@@ -198,7 +198,7 @@
 .pinkUnderlap1:hover {
   z-index: 2;
 }
-.exceedingStakeholderExpectat {
+.yellowOverlap1Text {
   position: relative;
   font-weight: 500;
   display: inline-block;
@@ -235,7 +235,7 @@
 .yellowOverlap1:empty {
   display: flex;
 }
-.graduationCap1Icon {
+.pinkUnderlap2Icon {
   position: absolute;
   top: 172px;
   left: 24px;
@@ -243,7 +243,7 @@
   height: 150px;
   object-fit: cover;
 }
-.beyondRugsWe {
+.pinkUnderlap2Text {
   position: absolute;
   top: 26px;
   left: 43px;
@@ -251,7 +251,7 @@
   width: 325px;
   height: 136px;
 }
-.healthcare1Icon {
+.pinkUnderlap2Icon1 {
   position: absolute;
   top: 160px;
   left: 208px;
@@ -268,6 +268,14 @@
   width: 400px;
   overflow: hidden;
   opacity: 0;
+}
+.yellowOverlap1Text {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  width: 330px;
+  height: 214px;
+  flex-shrink: 0;
 }
 .pinkUnderlap2 {
   background-color: var(--color-pink);
@@ -296,17 +304,17 @@
 .yellowOverlap2:hover {
   z-index: -1;
 }
-.atARamRespect {
+.pinkUnderlap3Text {
   position: relative;
   display: inline-block;
   width: 346px;
   height: 150px;
   flex-shrink: 0;
 }
-.atARamRespect:hover {
+.pinkUnderlap3Text:hover {
   font-size: var(--p-body-text-size);
 }
-.honesty1Icon {
+.pinkUnderlap3Icon {
   position: relative;
   width: 218px;
   height: 207px;
@@ -336,7 +344,7 @@
 .pinkUnderlap3:hover {
   z-index: 2;
 }
-.respect {
+.yellowOverlap3Text {
   position: relative;
   font-weight: 500;
   display: inline-block;
@@ -369,7 +377,7 @@
 .yellowOverlap3:hover {
   z-index: -1;
 }
-.weAreCommitted {
+.purpleUnderlap2Text {
   position: absolute;
   top: 34px;
   left: 27px;
@@ -377,7 +385,7 @@
   width: 346px;
   height: 118px;
 }
-.india2Icon {
+.purpleUnderlap2Icon {
   position: absolute;
   top: 140px;
   left: 131px;
@@ -403,7 +411,7 @@
 .purpleUnderlap2:hover {
   z-index: 2;
 }
-.preservingArt {
+.blueOverlap2Text {
   position: relative;
   font-weight: 500;
   display: inline-block;
@@ -435,14 +443,14 @@
 .blueOverlap2:hover {
   z-index: -1;
 }
-.embracingChangeWhile {
+.purpleUnderlap1Text {
   position: relative;
   display: inline-block;
   width: 346px;
   height: 118px;
   flex-shrink: 0;
 }
-.projectManagement1Icon {
+.purpleUnderlap1Icon {
   position: relative;
   width: 180px;
   height: 184.1px;
@@ -472,7 +480,15 @@
 .purpleUnderlap1:hover {
   z-index: 2;
 }
-.acceptanceAndInnovation {
+.blueOverlap1Text {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  width: 287px;
+  height: 171px;
+  flex-shrink: 0;
+}
+.blueOverlap3Text {
   position: relative;
   font-weight: 500;
   display: inline-block;
@@ -506,14 +522,14 @@
 .blueOverlap1:hover {
   z-index: -1;
 }
-.ourPursuitOf {
+.purpleUnderlap3Text {
   position: relative;
   display: inline-block;
   width: 360px;
   height: 118px;
   flex-shrink: 0;
 }
-.quality2Icon {
+.purpleUnderlap3Icon {
   position: relative;
   width: 180px;
   height: 180px;
@@ -633,6 +649,7 @@
     width: 70%;
     left: 15%;
   }
+  
 }
 
 @media screen and (max-width: 970px) {

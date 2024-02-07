@@ -104,87 +104,87 @@ const AboutContainer = () => {
       </div>
       <div className={styles.pinkUnderlap1} data-animate-on-scroll>
         <img
-          className={styles.networking2Icon}
+          className={styles.pinkUnderlap1Icon}
           alt=""
           src="/networking-2@2x.png"
         />
-        <div className={styles.weAimNot}>
+        <div className={styles.pinkUnderlap1Text}>
           We aim not only to meet but surpass the expectations of those who
           believe in our mission.
         </div>
       </div>
       <div className={styles.yellowOverlap1} data-animate-on-scroll>
-        <div className={styles.exceedingStakeholderExpectat}>
+        <div className={styles.yellowOverlap1Text}>
           Exceeding Stakeholder Expectations
         </div>
       </div>
       <div className={styles.pinkUnderlap2} data-animate-on-scroll>
         <img
-          className={styles.graduationCap1Icon}
+          className={styles.pinkUnderlap2Icon}
           alt=""
           src="/graduationcap-1@2x.png"
         />
-        <div className={styles.beyondRugsWe}>
+        <div className={styles.pinkUnderlap2Text}>
           {" "}
           Beyond rugs, we invest in the education and health of our communities,
           ensuring a brighter future for generations to come.
         </div>
         <img
-          className={styles.healthcare1Icon}
+          className={styles.pinkUnderlap2Icon1}
           alt=""
           src="/healthcare-1@2x.png"
         />
       </div>
       <div className={styles.yellowOverlap2} data-animate-on-scroll>
         <div
-          className={styles.exceedingStakeholderExpectat}
+          className={styles.yellowOverlap2Text}
         >{`Promoting Community Education & Health`}</div>
       </div>
       <div className={styles.pinkUnderlap3} data-animate-on-scroll>
-        <div className={styles.atARamRespect}>
+        <div className={styles.pinkUnderlap3Text}>
           At A-RAM, respect is the foundation upon which we build both our
           workplace and our relationships with our global family.
         </div>
-        <img className={styles.honesty1Icon} alt="" src="/honesty-1@2x.png" />
+        <img className={styles.pinkUnderlap3Icon} alt="" src="/honesty-1@2x.png" />
       </div>
       <div className={styles.yellowOverlap3} data-animate-on-scroll>
-        <div className={styles.respect}>Respect</div>
+        <div className={styles.yellowOverlap3Text}>Respect</div>
       </div>
       <div className={styles.purpleUnderlap2} data-animate-on-scroll>
-        <div className={styles.weAreCommitted}>
+        <div className={styles.purpleUnderlap2Text}>
           We are committed to preserving the rich tapestry of artistic
           expression within our weaving heritage.
         </div>
-        <img className={styles.india2Icon} alt="" src="/india-2@2x.png" />
+        <img className={styles.purpleUnderlap2Icon} alt="" src="/india-2@2x.png" />
       </div>
       <div className={styles.blueOverlap2} data-animate-on-scroll>
-        <div className={styles.preservingArt}>Preserving Art</div>
+        <div className={styles.blueOverlap2Text}>Preserving Art</div>
       </div>
       <div className={styles.purpleUnderlap1} data-animate-on-scroll>
-        <div className={styles.embracingChangeWhile}>
+        <div className={styles.purpleUnderlap1Text}>
           Embracing change while cherishing tradition, we innovate to stay at
           the forefront of the home decor industry.
         </div>
         <img
-          className={styles.projectManagement1Icon}
+          className={styles.purpleUnderlap1Icon}
           alt=""
           src="/projectmanagement-1@2x.png"
         />
       </div>
       <div className={styles.blueOverlap1} data-animate-on-scroll>
-        <div className={styles.acceptanceAndInnovation}>
+        <div className={styles.blueOverlap1Text}>
           Acceptance and Innovation
         </div>
       </div>
       <div className={styles.purpleUnderlap3} data-animate-on-scroll>
-        <div className={styles.ourPursuitOf}>
+        <div className={styles.purpleUnderlap3Text}>
           Our pursuit of excellence extends to crafting top-tier products that
           embody the essence of quality and craftsmanship.
         </div>
-        <img className={styles.quality2Icon} alt="" src="/quality-2@2x.png" />
+        <img className={styles.purpleUnderlap3Icon} alt="" src="/quality-2@2x.png" />
       </div>
       <div className={styles.blueOverlap3} data-animate-on-scroll>
-        <div className={styles.acceptanceAndInnovation}>
+        <div className={styles.blueOverlap3Text}>
           Producing Top Class Products
         </div>
       </div>
