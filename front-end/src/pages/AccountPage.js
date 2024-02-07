@@ -55,8 +55,12 @@ const AccountPage = ({ user }) => {
     };
 
     const homeHandleClick = () => {
-        window.open("https://www.a-ramcreatives.com", "_self");
+        window.open("https://aram-website-online-marketplace-client-pm6dcyqbs.vercel.app", "_self");
     };
+
+    // const homeHandleClick = () => {
+    //     window.open("https://www.a-ramcreatives.com", "_self");
+    // };
 
     // const homeHandleClick = () => {
     //     window.open("http://localhost:3000", "_self");
