@@ -44,14 +44,14 @@ const AboutContainer = () => {
             <img className={styles.worker3Icon} alt="" src="/worker3@2x.png" />
           </div>
           <div className={styles.aRamIntro} data-animate-on-scroll>
-            <p className={styles.welcomeToARam}>
+            <p className={`${styles.text1} text1`}>
               Welcome to A-RAM, where the tapestry of tradition and innovation
               seamlessly weave together. Nestled in the heart of India, our
               roots in the ancient art of rug making stretch back nearly three
               centuries, creating a legacy that transcends time.
             </p>
-            <p className={styles.welcomeToARam}>&nbsp;</p>
-            <p className={styles.welcomeToARam}>
+            {/* <p className={styles.welcomeToARam}>&nbsp;</p> */}
+            <p className={`${styles.text2} text2`}>
               In the hallowed halls of the A-RAM weaving community,
               craftsmanship is not just a skill; it's a testament to resilience.
               Faced with challenges arising from the passage of time and limited
@@ -65,16 +65,22 @@ const AboutContainer = () => {
       </div>
       <div className={styles.outerCpaFrame}>
         <div className={styles.innerCpaFrame}>
+          <img
+            className={styles.rohitLinkedinProfile1IconTop}
+            alt=""
+            src="/rohitlinkedinprofile-1@2x.png"
+            data-animate-on-scroll
+          />
           <div className={styles.rohitIntro} data-animate-on-scroll>
-            <p className={styles.welcomeToARam}>
+            <p className={`${styles.text3} text3`}>
               At the helm is our visionary Founder and CEO, Rohit Prakash, CPA,
               CMA. With a global career spanning 25 years in strategy, finance,
               and quality management, Rohit has traded boardrooms for a higher
               purpose. His dedication to philanthropy is a testament to his
               belief that success is most meaningful when it uplifts others.
             </p>
-            <p className={styles.welcomeToARam}>&nbsp;</p>
-            <p className={styles.welcomeToARam}>
+            {/* <p className={styles.welcomeToARam}>&nbsp;</p> */}
+            <p className={`${styles.text4} text4`}>
               Our journey is fueled by a passion to revive the vibrant hues of
               Indian culture within our weaving communities. As we bridge the
               gap between tradition and the demands of the contemporary global
@@ -83,7 +89,7 @@ const AboutContainer = () => {
             </p>
           </div>
           <img
-            className={styles.rohitLinkedinProfile1Icon}
+            className={styles.rohitLinkedinProfile1IconBottom}
             alt=""
             src="/rohitlinkedinprofile-1@2x.png"
             data-animate-on-scroll

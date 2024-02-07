@@ -137,11 +137,11 @@
 
 @media screen and (max-width: 710px) {
   .regularHeroText {
-    top: 60%;
+    top: 57%;
     left: 15%;
     transform: translate(-50%, -50%);
     width: 70%;
-    font-size: 100%;
+    font-size: 85%;
   }
 
   .heroLogoIcon {
@@ -149,7 +149,7 @@
     left: 20%;
     transform: translate(-50%, -50%);
     width: 60%;
-    height: 45%;
+    height: 40%;
   }
 
   .boldHeroText {
@@ -157,7 +157,7 @@
     left: 20%;
     transform: translate(-50%, -50%);
     width: 70%;
-    font-size: 100%;
+    font-size: 85%;
   }
 }
 
@@ -175,11 +175,11 @@
     left: 20%;
     transform: translate(-50%, -50%);
     width: 60%;
-    height: 30%;
+    height: 25%;
   }
 
   .boldHeroText {
-    top: 35%;
+    top: 33%;
     left: 20%;
     transform: translate(-50%, -50%);
     width: 70%;
