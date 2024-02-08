@@ -59,7 +59,7 @@ function App() {
       console.log("B");
       try {
           console.log("C");
-          const response = await fetch("https://marketplace.a-ramcreatives.com/auth/login/success", {
+          const response = await fetch("http://localhost:5000/auth/login/success", {
               method: "GET",
               credentials: "include",
               headers: {

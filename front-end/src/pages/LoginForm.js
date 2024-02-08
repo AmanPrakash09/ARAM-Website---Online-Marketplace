@@ -3,15 +3,15 @@ import styles from "./LoginForm.module.css";
 const LoginForm = () => {
 
   const google = () => {
-    window.open("https://marketplace.a-ramcreatives.com/auth/google", "_self")
+    window.open("http://localhost:5000/auth/google", "_self")
   }
 
   const github = () => {
-    window.open("https://marketplace.a-ramcreatives.com/auth/github", "_self")
+    window.open("http://localhost:5000/auth/github", "_self")
   }
 
   const facebook = () => {
-    window.open("https://marketplace.a-ramcreatives.com/auth/facebook", "_self")
+    window.open("http://localhost:5000/auth/facebook", "_self")
   }
 
   return (
