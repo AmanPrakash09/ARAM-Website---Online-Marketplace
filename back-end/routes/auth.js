@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const passport = require("passport")
 
-// const CLIENT_URL = "https://www.a-ramcreatives.com/"
-const CLIENT_URL = "https://aram-website-online-marketpl-git-30e5ad-amans-projects-ba11e8b4.vercel.app/"
+const CLIENT_URL = "https://www.a-ramcreatives.com/"
+// const CLIENT_URL = "https://aram-website-online-marketpl-git-30e5ad-amans-projects-ba11e8b4.vercel.app/"
 // const CLIENT_URL = "http://localhost:3000/"
 const ACCOUNT_URL = CLIENT_URL + "account"
 
